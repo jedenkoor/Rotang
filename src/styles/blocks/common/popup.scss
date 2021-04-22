@@ -1,0 +1,330 @@
+.popup {
+  position: fixed;
+  z-index: 30;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $neutral-color-10;
+  opacity: 0;
+  visibility: hidden;
+  &--callback {
+    width: 870px;
+    @include w1023 {
+      width: calc(100% - 48px);
+    }
+    @include w767 {
+      width: calc(100% - 32px);
+    }
+    .popup__content {
+      @include w1023 {
+        padding: 48px 92px;
+      }
+      @include w767 {
+        padding: 48px 16px 16px;
+      }
+    }
+  }
+  &--review {
+    width: 646px;
+    @include w767 {
+      width: calc(100% - 32px);
+    }
+  }
+  &--info {
+    width: 400px;
+    @include w767 {
+      width: calc(100% - 32px);
+    }
+    .popup__content {
+      padding: 48px 16px 16px;
+    }
+    .popup__title {
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .popup__btn {
+      margin-bottom: 0;
+      padding: 8px 20px;
+      @include w767 {
+        padding: 8px 6px;
+      }
+    }
+  }
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s linear, opacity 0.2s linear;
+  }
+  &__close {
+    position: fixed;
+    z-index: 2;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    @include w767 {
+      top: 16px;
+      right: 16px;
+    }
+    &:hover {
+      background: rgba(61, 61, 59, 0.07);
+    }
+    &:focus {
+      background: rgba(61, 61, 59, 0.12);
+    }
+  }
+  &__content {
+    max-height: 95vh;
+    padding: 48px 112px;
+    overflow-y: auto;
+    @include w767 {
+      max-height: 80vh;
+      padding: 48px 16px 16px;
+    }
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 32px;
+    text-align: center;
+    @include w767 {
+      margin-bottom: 24px;
+      font-size: 17px;
+      line-height: 24px;
+    }
+    br {
+      @include w767 {
+        display: none;
+      }
+    }
+  }
+  &__subtitle {
+    margin-bottom: 20px;
+    text-align: center;
+    @include w767 {
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 28px;
+    @include w1023 {
+      grid-gap: 16px;
+    }
+    @include w767 {
+      grid-template-columns: 1fr;
+      grid-gap: initial;
+    }
+  }
+  &__input {
+    margin-bottom: 28px;
+    @include w1023 {
+      margin-bottom: 24px;
+    }
+    @include w767 {
+      margin-bottom: 16px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 104px;
+      padding: 12px;
+      border: 1px solid $neutral-color-8;
+      background: $neutral-color-10;
+      resize: none;
+      line-height: 24px;
+      overflow: hidden;
+      transition: none;
+      border-radius: 0;
+      -webkit-appearance: none;
+      @include w767 {
+        line-height: 16px;
+      }
+      &:hover {
+        border-color: $neutral-color-6;
+      }
+      &:focus {
+        border-color: $primary-color;
+      }
+      &::placeholder {
+        color: $neutral-color-6;
+      }
+    }
+  }
+  &__bot {
+    max-width: 225px;
+    margin-top: 40px;
+    margin-left: auto;
+    @include w767 {
+      max-width: none;
+      margin-top: 24px;
+    }
+  }
+  &__btns {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid $neutral-color-9;
+  }
+  &__btn {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 12px 0;
+    @include w767 {
+      padding: 8px 0;
+    }
+  }
+  &__text {
+    margin: 0;
+    font-size: 11px;
+    line-height: 14px;
+    a {
+      font-weight: 500;
+      &:hover,
+      &:focus {
+        color: $tertiary-color;
+      }
+    }
+  }
+  &__files {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 28px;
+    @include w1023 {
+      grid-gap: 16px;
+    }
+    @include w767 {
+      grid-template-columns: 1fr;
+    }
+    &--active {
+      .popup-files__send {
+        grid-column: 2 / 3;
+        @include w767 {
+          grid-column: 1 / 2;
+        }
+      }
+    }
+  }
+  &-files {
+    &__add {
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        background-color: $secondary-10-color;
+        border: 1px dashed $secondary-color;
+        color: $neutral-color-5;
+        cursor: pointer;
+        @include w1023 {
+          font-size: 14px;
+          line-height: 16px;
+        }
+        &:hover,
+        &:focus {
+          border-color: 1px dashed $secondary-hover-color;
+          color: $neutral-color-3;
+          path {
+            stroke: $secondary-hover-color;
+          }
+        }
+        svg {
+          margin-right: 8px;
+          @include w767 {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+      input {
+        display: none;
+      }
+    }
+    &__block {
+      grid-column: 1 / 3;
+      @include w767 {
+        grid-column: 1 / 2;
+      }
+    }
+    &-block {
+      &__title {
+        margin-bottom: 16px;
+        font-weight: 500;
+        color: $neutral-color-4;
+      }
+      &__list {
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 14px));
+        grid-gap: 16px 28px;
+        @include w767 {
+          grid-template-columns: 100%;
+          grid-gap: 12px;
+        }
+      }
+      &__item {
+        display: flex;
+        align-items: center;
+        span {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          color: $neutral-color-4;
+          @include w767 {
+            width: calc(100vw - 92px);
+          }
+        }
+      }
+      &__delete {
+        display: flex;
+        margin-right: 12px;
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          path {
+            &:first-child {
+              stroke: #8c8c88;
+              fill: #8c8c88;
+            }
+          }
+        }
+        svg {
+          @include w767 {
+            width: 16px;
+            height: 16px;
+          }
+          path {
+            transition: 0.1s;
+          }
+        }
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &-item {
+    picture {
+      flex-shrink: 0;
+    }
+    &__img {
+      width: 56px;
+      height: 56px;
+      margin-right: 12px;
+      object-fit: cover;
+      border: 1px solid $neutral-color-9;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.why {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 47.4%;
+    grid-gap: 48px;
+    @include w1200 {
+      grid-gap: 16px;
+    }
+    @include w1023 {
+      grid-template-columns: 100%;
+      grid-gap: 24px;
+    }
+    @include w767 {
+      grid-gap: 16px;
+    }
+    picture {
+      @include w1023 {
+        order: -1;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    @include w1023 {
+      height: 420px;
+      transform: translateX(-24px);
+      width: 100vw;
+      max-width: none;
+    }
+    @include w767 {
+      height: 200px;
+      transform: translateX(-16px);
+    }
+  }
+  &__text {
+    margin-bottom: 40px;
+    font-size: 21px;
+    line-height: 32px;
+    @include w1023 {
+      max-width: 90%;
+      margin-bottom: 24px;
+    }
+    @include w767 {
+      max-width: none;
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 28px;
+    @include w1023 {
+      grid-gap: 16px;
+    }
+    @include w767 {
+      grid-template-columns: 100%;
+      grid-gap: 24px;
+    }
+  }
+  &__subtitle {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: $primary-color;
+    @include w1023 {
+      max-width: 88%;
+    }
+    @include w767 {
+      max-width: none;
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+  &__subtext {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

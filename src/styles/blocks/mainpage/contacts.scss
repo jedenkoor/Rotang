@@ -1,0 +1,143 @@
+.contacts {
+  overflow: hidden;
+  &__content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 64px;
+    @include w1200 {
+      grid-gap: 40px;
+    }
+    @include w1023 {
+      grid-template-columns: 100%;
+      grid-gap: 20px;
+    }
+    @include w767 {
+      grid-gap: 16px;
+    }
+  }
+  &__info {
+    width: 646px;
+    @include w1200 {
+      width: 585px;
+    }
+    @include w1023 {
+      width: auto;
+    }
+  }
+  &-info {
+    &__text {
+      max-width: 530px;
+      margin-bottom: 41px;
+      font-size: 26px;
+      line-height: 32px;
+      color: $neutral-color-2;
+      @include w1023 {
+        margin-bottom: 28px;
+      }
+      @include w767 {
+        margin-bottom: 24px;
+        font-size: 21px;
+        line-height: 32px;
+      }
+    }
+    &__row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 27px;
+      margin-bottom: 48px;
+      @include w1023 {
+        grid-gap: 16px;
+        margin-bottom: 40px;
+      }
+      @include w767 {
+        grid-template-columns: 100%;
+        grid-gap: 24px;
+      }
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 32px;
+      color: $primary-color;
+      @include w767 {
+        margin-bottom: 12px;
+        font-size: 17px;
+        line-height: 24px;
+      }
+    }
+    &__item {
+      display: flex;
+      color: $primary-shade-color;
+      &:not(:not(a)) {
+        &:hover,
+        &:focus {
+          color: $tertiary-color;
+          path {
+            fill: $tertiary-color;
+          }
+        }
+      }
+      svg {
+        flex-shrink: 0;
+        margin-right: 8px;
+        @include w767 {
+          width: 16px;
+          height: 16px;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 12px;
+        @include w767 {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  &-form {
+    &__row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 28px;
+      margin-bottom: 40px;
+      @include w1023 {
+        margin-bottom: 32px;
+      }
+      @include w767 {
+        grid-template-columns: 100%;
+        grid-gap: 24px;
+      }
+    }
+    &__btn {
+      width: 100%;
+      padding: 12px 0;
+      @include w1023 {
+        padding: 8px 0;
+      }
+    }
+    &__text {
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 16px;
+      a {
+        font-weight: 500;
+        &:hover,
+        &:focus {
+          color: $tertiary-color;
+        }
+      }
+    }
+  }
+  &__map {
+    height: 452px;
+    transform: translateY(-10px);
+    @include w1023 {
+      order: -1;
+      width: 100vw;
+      height: 420px;
+      transform: translateX(-24px);
+    }
+    @include w767 {
+      height: 200px;
+    }
+  }
+}

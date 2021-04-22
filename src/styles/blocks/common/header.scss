@@ -1,0 +1,205 @@
+.overlay {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 200vh;
+  background-color: rgb(61 61 59 / 34%);
+  opacity: 0;
+  visibility: hidden;
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s linear, opacity 0.2s linear;
+  }
+  &--menu {
+    z-index: 9;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s linear, opacity 0.2s linear;
+  }
+}
+
+.header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 32px 0;
+  color: $primary-shade-color;
+  @include w1200 {
+    padding: 20px 0;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    @include w1200 {
+      position: relative;
+      z-index: 2;
+      margin-right: auto;
+    }
+    path {
+      transition: fill 0.2s;
+    }
+    &:hover path,
+    &:focus path {
+      fill: $tertiary-color;
+    }
+  }
+  &__nav {
+    margin: 0 auto;
+    @include w1200 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: $neutral-color-10;
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &--active {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &-nav {
+    &__bot {
+      @include w767 {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 30px 24px 24px;
+      }
+    }
+    .header__phone,
+    .header__basket {
+      display: none;
+      @include w767 {
+        display: block;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    @include w1200 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 24px;
+      margin-top: 64px;
+      padding: 24px;
+      border-top: 1px solid $neutral-color-9;
+    }
+    @include w1023 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include w767 {
+      padding: 24px 16px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &-list {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+      @include w1200 {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      white-space: nowrap;
+      @include w767 {
+        white-space: normal;
+        font-size: 17px;
+        line-height: 24px;
+      }
+      &:hover,
+      &:focus {
+        color: $tertiary-color;
+      }
+    }
+  }
+  &__phone {
+    margin-right: 28px;
+    font-weight: 500;
+    white-space: nowrap;
+    @include w1200 {
+      position: relative;
+      z-index: 2;
+    }
+    @include w767 {
+      display: none;
+      font-size: 17px;
+      line-height: 24px;
+    }
+    &:hover,
+    &:focus {
+      color: $tertiary-color;
+    }
+  }
+  &__basket {
+    position: relative;
+    z-index: 2;
+    @include w767 {
+      display: none;
+      font-size: 17px;
+      line-height: 24px;
+    }
+    &:hover,
+    &:focus {
+      color: $tertiary-color;
+    }
+    &:before {
+      content: attr(data-count);
+      position: absolute;
+      left: calc(100% + 4px);
+      top: 0;
+      font-size: 11px;
+      line-height: 14px;
+      color: $tertiary-color;
+    }
+  }
+  &__burger {
+    display: none;
+    margin-left: 55px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    @include w1200 {
+      position: relative;
+      z-index: 2;
+      display: flex;
+    }
+    path {
+      transition: 0.2s;
+    }
+    &:hover path,
+    &:focus path {
+      stroke: $tertiary-color;
+    }
+    &--active {
+      path {
+        &:nth-child(1) {
+          transform: translate(9px, 0px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(20px);
+        }
+        &:nth-child(3) {
+          transform: translate(-8px, 8.4px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

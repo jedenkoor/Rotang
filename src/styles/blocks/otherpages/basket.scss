@@ -1,0 +1,500 @@
+.basket {
+  padding-top: 86px;
+  @include w1200 {
+    padding-top: 56px;
+  }
+  @include w767 {
+    padding-top: 40px;
+  }
+  &__empty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include w1023 {
+      display: block;
+    }
+  }
+  &-empty {
+    &__col {
+      width: 44%;
+      @include w1200 {
+        width: 50%;
+      }
+      @include w1023 {
+        width: 81%;
+        margin-bottom: 64px;
+      }
+      @include w767 {
+        width: 100%;
+      }
+    }
+    &__title {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-weight: normal;
+      font-size: 33px;
+      line-height: 40px;
+      color: $primary-shade-color;
+      @include w767 {
+        margin-bottom: 12px;
+        font-size: 21px;
+        line-height: 32px;
+      }
+    }
+    &__text {
+      margin-top: 0;
+      margin-bottom: 40px;
+      color: $primary-shade-color;
+    }
+    &__btns {
+      display: flex;
+      @include w767 {
+        flex-direction: column;
+      }
+    }
+    &__btn {
+      padding: 12px 28px;
+      margin-right: 16px;
+      @include w767 {
+        width: 100%;
+        margin-right: 0;
+      }
+      &:not(:last-child) {
+        @include w767 {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    &__categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 28px;
+      width: 41%;
+      padding-left: 0;
+      list-style: none;
+      @include w1200 {
+        width: 48%;
+        grid-gap: 11px;
+      }
+      @include w1023 {
+        width: 75%;
+        grid-gap: 28px;
+      }
+      @include w767 {
+        display: flex;
+        width: calc(100% + 32px);
+        grid-gap: initial;
+        padding-left: 16px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        transform: translateX(-16px);
+      }
+      &:after {
+        @include w767 {
+          content: '';
+          flex: 0 0 16px;
+        }
+      }
+    }
+    &__category {
+      @include w767 {
+        flex: 0 0 160px;
+      }
+      &:not(:last-child) {
+        @include w767 {
+          margin-right: 17px;
+        }
+      }
+    }
+    &-category {
+      &__link {
+        &:hover,
+        &:focus {
+          .basket-empty-category__title {
+            color: $tertiary-color;
+          }
+        }
+        &:hover .basket-empty-category__wrap,
+        &:focus .basket-empty-category__wrap {
+          border-color: $tertiary-color;
+        }
+      }
+      &__wrap {
+        position: relative;
+        padding-bottom: 100%;
+        border: 1px solid $neutral-color-9;
+      }
+      &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &__title {
+        margin-top: 12px;
+        margin-bottom: 0;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 49px;
+    @include w1023 {
+      margin-bottom: 18px;
+    }
+    @include w767 {
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+  &__title {
+    margin-bottom: 0;
+    @include w767 {
+      margin-bottom: 31px;
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    @include w767 {
+      justify-content: space-between;
+    }
+  }
+  &__num {
+    color: $primary-color;
+    @include w767 {
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+  &__btn {
+    display: block;
+    margin-left: 40px;
+    padding: 12px 28px;
+    @include w1023 {
+      padding: 8px 20px;
+    }
+    @include w767 {
+      margin-left: 0;
+    }
+  }
+  &__header {
+    display: flex;
+    margin-bottom: 26px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 32px;
+    color: $primary-color;
+    .basket__col:nth-child(1) {
+      padding-left: 0;
+    }
+    @include w1023 {
+      display: none;
+    }
+  }
+  &__col {
+    display: flex;
+    align-items: center;
+    @include w1023 {
+      position: relative;
+      align-items: flex-start;
+      padding-right: 40px;
+      padding-left: 86px;
+    }
+    &:not(:last-child) {
+      @include w1023 {
+        margin-bottom: 11px;
+      }
+      @include w767 {
+        margin-bottom: 13px;
+      }
+    }
+    &:nth-child(1) {
+      flex: 0 0 51%;
+      padding-left: 48px;
+      @include w1023 {
+        padding-left: 86px;
+      }
+    }
+    &:nth-child(2) {
+      flex: 0 0 17.1%;
+      @include w1023 {
+        font-size: 11px;
+        line-height: 14px;
+      }
+    }
+    &:nth-child(3) {
+      flex: 0 0 13%;
+    }
+    &:nth-child(4) {
+      flex: 1;
+      justify-content: flex-end;
+      text-align: right;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 32px;
+      @include w1200 {
+        font-size: 17px;
+        line-height: 24px;
+      }
+      @include w1023 {
+        justify-content: flex-start;
+      }
+    }
+    .good-num__btn {
+      @include w1023 {
+        width: 24px;
+        height: 24px;
+      }
+      svg {
+        @include w1023 {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+    .good-num__input {
+      @include w1023 {
+        width: 24px;
+        height: 24px;
+        margin: 0 8px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+  &__items {
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    padding: 24px 0;
+    border-radius: 8px;
+    border-bottom: 1px solid $neutral-color-9;
+    @include w1023 {
+      display: block;
+    }
+    &--deleted {
+      .basket__col {
+        &:nth-child(2),
+        &:nth-child(3) {
+          @include w1023 {
+            display: none;
+          }
+        }
+        &:nth-child(1),
+        &:nth-child(4) {
+          @include w1023 {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+  &-item {
+    &__img {
+      width: 84px;
+      height: 84px;
+      flex-shrink: 0;
+      margin-right: 28px;
+      border: 1px solid $neutral-color-9;
+      overflow: hidden;
+      transition: border-color 0.1s;
+      @include w1023 {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 70px;
+        height: 70px;
+      }
+      @include w767 {
+        top: 1px;
+      }
+      &:hover {
+        border-color: $tertiary-color;
+      }
+      &:focus {
+        border-color: $tertiary-hover-color;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__delete {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: 0.1s;
+      &:hover,
+      &:focus {
+        path {
+          &:first-child {
+            stroke: #8c8c88;
+            fill: #8c8c88;
+          }
+        }
+      }
+      @include w1023 {
+        top: 6px;
+        right: 0;
+        left: auto;
+        transform: none;
+      }
+      @include w767 {
+        top: 2px;
+      }
+      svg {
+        path {
+          transition: 0.1s;
+        }
+      }
+    }
+    &__name {
+      @include w1023 {
+        font-size: 14px;
+        line-height: 16px;
+      }
+      &:hover,
+      &:focus {
+        color: $tertiary-color;
+      }
+    }
+    &__text {
+      padding-right: 20%;
+      font-size: 16px;
+      line-height: 24px;
+      @include w1023 {
+        padding-right: 0;
+        font-size: 14px;
+        line-height: 16px;
+      }
+      span {
+        font-weight: 500;
+      }
+    }
+    &__recovery {
+      padding: 12px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      @include w1023 {
+        padding: 8px 16px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+  &__wrap {
+    @include w767 {
+      position: sticky;
+      bottom: 0;
+      padding-bottom: 16px;
+      background: #fff;
+    }
+  }
+  &__bot {
+    position: relative;
+    display: flex;
+    margin-bottom: 50px;
+    padding-top: 22px;
+    @include w1023 {
+      padding-top: 29px;
+      margin-bottom: 41px;
+    }
+    @include w767 {
+      padding-top: 26px;
+    }
+    .basket__col {
+      @include w1023 {
+        padding-left: 86px;
+      }
+      @include w767 {
+        padding: 0;
+      }
+      &:nth-child(1) {
+        @include w1023 {
+          display: none;
+        }
+      }
+      &:nth-child(2) {
+        @include w1023 {
+          font-size: 14px;
+          line-height: 16px;
+          font-weight: 500;
+        }
+      }
+      &:nth-child(3) {
+        @include w1023 {
+          position: absolute;
+          top: 53px;
+          left: 0;
+          font-size: 14px;
+          line-height: 16px;
+        }
+        @include w767 {
+          top: 50px;
+        }
+      }
+      &:nth-child(4) {
+        @include w1023 {
+          justify-content: flex-end;
+          padding-top: 13px;
+        }
+      }
+    }
+  }
+  &__total {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+    @include w1200 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    @include w1023 {
+      margin-bottom: 0;
+      font-size: 21px;
+      line-height: 32px;
+      font-weight: normal;
+    }
+  }
+  &__checkout {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    padding: 12px 28px;
+    @include w1023 {
+      padding: 8px 22px;
+    }
+    @include w767 {
+      padding: 8px 20px;
+    }
+    &:not(:first-child) {
+      margin-left: 16px;
+      @include w767 {
+        flex: 1;
+        padding: 8px 0;
+        text-align: center;
+      }
+    }
+  }
+}

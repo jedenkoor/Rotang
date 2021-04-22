@@ -1,0 +1,69 @@
+form.popup.popup--callback(action="#" data-popup="callback") 
+  button.popup__close 
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18.3637 5.63623L11.9997 12.0002M11.9997 12.0002L5.63574 18.3642M11.9997 12.0002L18.3637 18.3642M11.9997 12.0002L5.63574 5.63623" stroke="black"/>
+    </svg>
+  .popup__content
+    h4.popup__title Оставьте свои контакты, и наш менеджер<br> свяжется с вами для уточнения деталей заказа
+    .popup__row
+      label.popup__input.input-block 
+        input(placeholder=" " data-required="")
+        span Ваше имя
+      label.popup__input.input-block 
+        input(placeholder=" " data-type="tel" data-required="")
+        span Телефон
+    .popup__input
+      textarea(placeholder="Опишите ваши пожелания к изделию" name="message" cols="30" rows="1" data-type="textarea" data-required)
+    .popup__files.popup-files
+      .popup-files__add
+        label(tabindex="0")
+          input(type="file")
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2366 2.76193H8.58455C6.50455 2.75393 4.79955 4.41093 4.75055 6.49093V17.3399C4.71555 19.3899 6.34855 21.0809 8.39955 21.1169C8.46055 21.1169 8.52255 21.1169 8.58455 21.1149H16.5726C18.6416 21.0939 20.3056 19.4089 20.3026 17.3399V8.03993L15.2366 2.76193Z" stroke="#8C8C88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.9746 2.75012V5.65912C14.9746 7.07912 16.1236 8.23012 17.5436 8.23412H20.2976" stroke="#8C8C88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.7945 12.9142H9.89453" stroke="#8C8C88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.3438 15.3639V10.4639" stroke="#8C8C88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          | Прикрепить свои эскизы
+      .popup-files__send 
+        button.popup__btn.btn-primary Оставить отзыв
+        p.popup__text Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+    .popup__files.popup-files.popup__files--active
+      .popup-files__add
+        label(tabindex="0")
+          input(type="file")
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2366 2.76193H8.58455C6.50455 2.75393 4.79955 4.41093 4.75055 6.49093V17.3399C4.71555 19.3899 6.34855 21.0809 8.39955 21.1169C8.46055 21.1169 8.52255 21.1169 8.58455 21.1149H16.5726C18.6416 21.0939 20.3056 19.4089 20.3026 17.3399V8.03993L15.2366 2.76193Z" stroke="#8C8C88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.9746 2.75012V5.65912C14.9746 7.07912 16.1236 8.23012 17.5436 8.23412H20.2976" stroke="#8C8C88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.7945 12.9142H9.89453" stroke="#8C8C88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.3438 15.3639V10.4639" stroke="#8C8C88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          | Прикрепить свои эскизы
+      .popup-files__block.popup-files-block
+        p.popup-files-block__title Загруженные файлы
+        ul.popup-files-block__list
+          li.popup-files-block__item 
+            button.popup-files-block__delete 
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" fill="#BEBEBC" stroke="#BEBEBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.70711 8.29289C9.31658 7.90237 8.68342 7.90237 8.29289 8.29289C7.90237 8.68342 7.90237 9.31658 8.29289 9.70711L10.5858 12L8.29289 14.2929C7.90237 14.6834 7.90237 15.3166 8.29289 15.7071C8.68342 16.0976 9.31658 16.0976 9.70711 15.7071L12 13.4142L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L13.4142 12L15.7071 9.70711C16.0976 9.31658 16.0976 8.68342 15.7071 8.29289C15.3166 7.90237 14.6834 7.90237 14.2929 8.29289L12 10.5858L9.70711 8.29289Z" fill="white"/>
+              </svg>
+            span кресло подв.pdf
+          li.popup-files-block__item 
+            button.popup-files-block__delete 
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" fill="#BEBEBC" stroke="#BEBEBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.70711 8.29289C9.31658 7.90237 8.68342 7.90237 8.29289 8.29289C7.90237 8.68342 7.90237 9.31658 8.29289 9.70711L10.5858 12L8.29289 14.2929C7.90237 14.6834 7.90237 15.3166 8.29289 15.7071C8.68342 16.0976 9.31658 16.0976 9.70711 15.7071L12 13.4142L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L13.4142 12L15.7071 9.70711C16.0976 9.31658 16.0976 8.68342 15.7071 8.29289C15.3166 7.90237 14.6834 7.90237 14.2929 8.29289L12 10.5858L9.70711 8.29289Z" fill="white"/>
+              </svg>
+            span стол1.png
+          li.popup-files-block__item 
+            button.popup-files-block__delete 
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" fill="#BEBEBC" stroke="#BEBEBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.70711 8.29289C9.31658 7.90237 8.68342 7.90237 8.29289 8.29289C7.90237 8.68342 7.90237 9.31658 8.29289 9.70711L10.5858 12L8.29289 14.2929C7.90237 14.6834 7.90237 15.3166 8.29289 15.7071C8.68342 16.0976 9.31658 16.0976 9.70711 15.7071L12 13.4142L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L13.4142 12L15.7071 9.70711C16.0976 9.31658 16.0976 8.68342 15.7071 8.29289C15.3166 7.90237 14.6834 7.90237 14.2929 8.29289L12 10.5858L9.70711 8.29289Z" fill="white"/>
+              </svg>
+            span стsfsdfdsgfewt421423525512ц11212312.png
+      .popup-files__send 
+        button.popup__btn.btn-primary Оставить отзыв
+        p.popup__text Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+

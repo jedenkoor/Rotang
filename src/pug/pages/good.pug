@@ -1,0 +1,131 @@
+extends ../template
+
+block variables
+  - var title = 'Страница товара'
+
+block content
+  section.good.margin-section
+    .container.good__container 
+      .good__mobtitle Кресло подвесное «Хаос» с подушкой
+      .good__col
+        .good__slider.good-slider.swiper-container
+          .good-slider__wrapper.swiper-wrapper
+            .good-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/good.jpg")
+                img.good-slider__img(src="images/good.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+            .good-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/good2.jpg")
+                img.good-slider__img(src="images/good2.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+            .good-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/good3.jpg")
+                img.good-slider__img(src="images/good3.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+            .good-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/good.jpg")
+                img.good-slider__img(src="images/good.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+            .good-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/good2.jpg")
+                img.good-slider__img(src="images/good2.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+            .good-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/good3.jpg")
+                img.good-slider__img(src="images/good3.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+          .swiper-pagination
+          .swiper-button-prev
+            <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM22 4.5H1V3.5H22V4.5Z" fill="#ED6A4D"/>
+            </svg>
+          .swiper-button-next
+            <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.3536 4.35355C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464466C17.9763 0.269204 17.6597 0.269204 17.4645 0.464466C17.2692 0.659728 17.2692 0.976311 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53553C17.6597 7.7308 17.9763 7.7308 18.1716 7.53553L21.3536 4.35355ZM0 4.5H21V3.5H0V4.5Z" fill="#ED6A4D"/>
+            </svg>
+        .good-thumbs__wrap
+          .good__thumbs.good-thumbs.swiper-container
+            .good-thumbs__wrapper.swiper-wrapper
+              .good-thumbs__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/good.jpg")
+                  img.good-thumbs__img(src="images/good.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+              .good-thumbs__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/good2.jpg")
+                  img.good-thumbs__img(src="images/good2.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+              .good-thumbs__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/good3.jpg")
+                  img.good-thumbs__img(src="images/good3.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+              .good-thumbs__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/good.jpg")
+                  img.good-thumbs__img(src="images/good.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+              .good-thumbs__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/good2.jpg")
+                  img.good-thumbs__img(src="images/good2.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+              .good-thumbs__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/good3.jpg")
+                  img.good-thumbs__img(src="images/good3.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+          .swiper-button-prev
+            <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM22 4.5H1V3.5H22V4.5Z" fill="#ED6A4D"/>
+            </svg>
+          .swiper-button-next
+            <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.3536 4.35355C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464466C17.9763 0.269204 17.6597 0.269204 17.4645 0.464466C17.2692 0.659728 17.2692 0.976311 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53553C17.6597 7.7308 17.9763 7.7308 18.1716 7.53553L21.3536 4.35355ZM0 4.5H21V3.5H0V4.5Z" fill="#ED6A4D"/>
+            </svg>
+      .good__col
+        h1.good__title Кресло подвесное «Хаос» с подушкой
+        .good__prices
+          span.good__price.good__price--new 1 320 000 руб.
+          span.good__price.good__price--old 1 520 000 руб.
+          span.good__hint Цена указана с подушкой
+        .good__row 
+          .good__num.good-num
+            button.good-num__btn(disabled="disabled")
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 12H12L3 12" stroke="#ED6A4D"/>
+              </svg>
+            input.good-num__input(type="number" value="12")
+            button.good-num__btn
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3V12M12 12V21M12 12H21M12 12L3 12" stroke="#ED6A4D"/>
+              </svg>
+          button.good__buy.btn-primary.popup-btn(data-popup="addToBasket") В корзину
+        p.good__text Кресло выдерживает нагрузку до 120 кг. Данное кресло можно как подвесить к потолку, так и поставить прочный каркас. Подвесное кресло прекрасно впишется в зону лаунжа или гостиной, но вы сможете расположить их где угодно: на балконе, на террасе, в спальне или даже на кухне. На выбор — 2 вида плетения: <a href="#" class="hint">«Хаос»</a> и <a href="#" class="hint">«Звезда Давида»</a>.
+        .good__params.good-params
+          .good-params__col
+            h2.good-params__title Характеристики
+            ul.good-params__list 
+              li.good-params__item 
+                span.good-params__name Высота каркаса
+                span.good-params__val 195 см
+              li.good-params__item 
+                span.good-params__name Ширина кокона
+                span.good-params__val 95 см
+              li.good-params__item 
+                span.good-params__name Высота
+                span.good-params__val 140 см
+              li.good-params__item 
+                span.good-params__name Глубина
+                span.good-params__val 70 см
+          .good-params__col
+            h2.good-params__title Производство и доставка
+            ul.good-params__list 
+              li.good-params__item 
+                span.good-params__name Срок производства
+                span.good-params__val 14–20 дней
+              li.good-params__item 
+                span.good-params__name Гарантия 
+                span.good-params__val 3 года
+              li.good-params__item 
+                span.good-params__name Доставка по&nbsp;Санкт&#8209;Петербургу
+                span.good-params__val Бесплатно от&nbsp;50&nbsp;000 руб.
+              li.good-params__item 
+                span.good-params__name Доставка по России
+                span.good-params__val Уточнить у менеджера
+

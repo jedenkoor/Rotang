@@ -1,0 +1,29 @@
+extends ../template
+
+block variables
+  - var title = '404'
+
+block content
+  style.
+    .wrapper{
+      position: relative;
+    }
+    .wrapper .footer{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: none
+    }
+    @media screen and (max-width: 1023px) {
+      .wrapper .footer{
+        border-top: 1px solid #D7D7D5;
+      }
+    }
+  section.notfound
+    .container.notfound__container
+      h1.notfound__title 404
+      .notfound__col
+        p.notfound__subtitle Страница не найдена
+        p.notfound__text Проверьте её написание в адресной строке или свяжитесь с нами
+        button.notfound__btn.btn-secondary.popup-btn(data-popup="callback") Заказать звонок

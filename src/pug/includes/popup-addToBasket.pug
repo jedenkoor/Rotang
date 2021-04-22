@@ -1,0 +1,15 @@
+.popup.popup--info(data-popup="addToBasket") 
+  button.popup__close 
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18.3637 5.63623L11.9997 12.0002M11.9997 12.0002L5.63574 18.3642M11.9997 12.0002L18.3637 18.3642M11.9997 12.0002L5.63574 5.63623" stroke="black"/>
+    </svg>
+  .popup__content
+    h4.popup__title Товар добавлен в корзину
+    .popup__item.popup-item 
+      picture
+        source(type="image/webp" srcset="images/good.jpg")
+        img.popup-item__img(src="images/good.jpg" alt="Кресло подвесное «Хаос» с подушкой") 
+      p.popup-item__name Кресло подвесное «Хаос» с подушкой
+    .popup__btns 
+      button.popup__btn.btn-secondary Назад
+      a.popup__btn.btn-primary(href="#") Перейти в корзину

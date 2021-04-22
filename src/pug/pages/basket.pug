@@ -1,0 +1,131 @@
+extends ../template
+
+block variables
+  - var title = 'Корзина'
+
+block content
+  section.basket.margin-section
+    .container 
+      .basket__top 
+        h1.basket__title.h1title Корзина
+        .basket__row 
+          span.basket__num 24 товара
+          button.basket__btn.btn-secondary.popup-btn(data-popup="clearBasket") Очистить корзину
+      .basket__header 
+        .basket__col Товар
+        .basket__col Стоимость
+        .basket__col Количество
+        .basket__col Всего
+      ul.basket__items 
+        li.basket__item.basket-item
+          .basket__col
+            button.basket-item__delete
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.00006C6.47715 2.00006 2 6.47721 2 12.0001C2 17.5229 6.47715 22.0001 12 22.0001C17.5228 22.0001 22 17.5229 22 12.0001C22 6.47721 17.5228 2.00006 12 2.00006Z" fill="#BEBEBC" stroke="#BEBEBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.70711 8.29295C9.31658 7.90243 8.68342 7.90243 8.29289 8.29295C7.90237 8.68348 7.90237 9.31664 8.29289 9.70717L10.5858 12.0001L8.29289 14.293C7.90237 14.6835 7.90237 15.3166 8.29289 15.7072C8.68342 16.0977 9.31658 16.0977 9.70711 15.7072L12 13.4143L14.2929 15.7072C14.6834 16.0977 15.3166 16.0977 15.7071 15.7072C16.0976 15.3166 16.0976 14.6835 15.7071 14.293L13.4142 12.0001L15.7071 9.70717C16.0976 9.31664 16.0976 8.68348 15.7071 8.29295C15.3166 7.90243 14.6834 7.90243 14.2929 8.29295L12 10.5858L9.70711 8.29295Z" fill="white"/>
+              </svg>
+            a.basket-item__img(href="#")
+              picture
+                source(type="image/webp" srcset="images/good.jpg")
+                img(src="images/good.jpg" alt="Кресло подвесное «Хаос» с подушкой") 
+            .basket-item__info 
+              a.basket-item__name(href="#") Кресло подвесное «Хаос» с подушкой
+          .basket__col 20 000 руб.
+          .basket__col 
+            .good__num.good-num
+              button.good-num__btn(disabled="disabled")
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 12H12L3 12" stroke="#ED6A4D"/>
+                </svg>
+              input.good-num__input(type="number" value="1")
+              button.good-num__btn
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 3V12M12 12V21M12 12H21M12 12L3 12" stroke="#ED6A4D"/>
+                </svg>
+          .basket__col 20 000 руб.
+        li.basket__item.basket-item
+          .basket__col
+            button.basket-item__delete
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.00006C6.47715 2.00006 2 6.47721 2 12.0001C2 17.5229 6.47715 22.0001 12 22.0001C17.5228 22.0001 22 17.5229 22 12.0001C22 6.47721 17.5228 2.00006 12 2.00006Z" fill="#BEBEBC" stroke="#BEBEBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.70711 8.29295C9.31658 7.90243 8.68342 7.90243 8.29289 8.29295C7.90237 8.68348 7.90237 9.31664 8.29289 9.70717L10.5858 12.0001L8.29289 14.293C7.90237 14.6835 7.90237 15.3166 8.29289 15.7072C8.68342 16.0977 9.31658 16.0977 9.70711 15.7072L12 13.4143L14.2929 15.7072C14.6834 16.0977 15.3166 16.0977 15.7071 15.7072C16.0976 15.3166 16.0976 14.6835 15.7071 14.293L13.4142 12.0001L15.7071 9.70717C16.0976 9.31664 16.0976 8.68348 15.7071 8.29295C15.3166 7.90243 14.6834 7.90243 14.2929 8.29295L12 10.5858L9.70711 8.29295Z" fill="white"/>
+              </svg>
+            a.basket-item__img(href="#")
+              picture
+                source(type="image/webp" srcset="images/good.jpg")
+                img(src="images/good.jpg" alt="Комплект мебели формы «Гаити»") 
+            .basket-item__info 
+              a.basket-item__name.hover-link(href="#") Комплект мебели формы «Гаити»
+          .basket__col 20 000 руб.
+          .basket__col 
+            .good__num.good-num
+              button.good-num__btn
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 12H12L3 12" stroke="#ED6A4D"/>
+                </svg>
+              input.good-num__input(type="number" value="12")
+              button.good-num__btn
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 3V12M12 12V21M12 12H21M12 12L3 12" stroke="#ED6A4D"/>
+                </svg>
+          .basket__col 240 000 руб.
+        li.basket__item.basket__item--deleted.basket-item
+          .basket__col
+            button.basket-item__delete
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.00006C6.47715 2.00006 2 6.47721 2 12.0001C2 17.5229 6.47715 22.0001 12 22.0001C17.5228 22.0001 22 17.5229 22 12.0001C22 6.47721 17.5228 2.00006 12 2.00006Z" fill="#BEBEBC" stroke="#BEBEBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.70711 8.29295C9.31658 7.90243 8.68342 7.90243 8.29289 8.29295C7.90237 8.68348 7.90237 9.31664 8.29289 9.70717L10.5858 12.0001L8.29289 14.293C7.90237 14.6835 7.90237 15.3166 8.29289 15.7072C8.68342 16.0977 9.31658 16.0977 9.70711 15.7072L12 13.4143L14.2929 15.7072C14.6834 16.0977 15.3166 16.0977 15.7071 15.7072C16.0976 15.3166 16.0976 14.6835 15.7071 14.293L13.4142 12.0001L15.7071 9.70717C16.0976 9.31664 16.0976 8.68348 15.7071 8.29295C15.3166 7.90243 14.6834 7.90243 14.2929 8.29295L12 10.5858L9.70711 8.29295Z" fill="white"/>
+              </svg>
+            .basket-item__text <span>Комплект мебели формы «Гаити»</span> удалён из корзины
+          .basket__col  
+          .basket__col
+          .basket__col
+            button.basket-item__recovery.btn-secondary Восстановить
+
+      .basket__wrap
+        .basket__bot
+          .basket__col 
+          .basket__col Итого
+          .basket__col 13 товаров
+          .basket__col
+            .basket__total 260 000 руб.
+        .basket__row
+          a.basket__checkout.btn-secondary(href="#") В каталог
+          button.basket__checkout.btn-primary.popup-btn(data-popup="callback") Оформить заказ
+
+
+  section.basket.margin-section
+    .container 
+      .basket__top 
+        h1.basket__title.h1title Корзина  
+      .basket__empty.basket-empty 
+        .basket-empty__col
+          h2.basket-empty__title В корзине ничего нет
+          p.basket-empty__text Обращаем внимание, что мы готовы изготовить мебель по вашему эскизу. В форме обратной связи вы можете прикрепить свои эскизы в любом формате или описать нам свои пожелания
+          .basket-empty__btns
+            a.basket-empty__btn.btn-primary(href="#") Перейти в каталог
+            button.basket-empty__btn.btn-secondary.popup-btn(data-popup="callback") Заказать звонок
+        ul.basket-empty__categories 
+          li.basket-empty__category.basket-empty-category 
+            a.basket-empty-category__link(href="#") 
+              .basket-empty-category__wrap
+                picture
+                  source(type="image/webp" srcset="images/category.jpg")
+                  img.basket-empty-category__img(src="images/category.jpg" alt="Подвесные кресла")
+              h3.basket-empty-category__title Подвесные кресла 
+          li.basket-empty__category.basket-empty-category 
+            a.basket-empty-category__link(href="#") 
+              .basket-empty-category__wrap
+                picture
+                  source(type="image/webp" srcset="images/category2.jpg")
+                  img.basket-empty-category__img(src="images/category2.jpg" alt="Диваны и комплекты")
+              h3.basket-empty-category__title Диваны и комплекты 
+          li.basket-empty__category.basket-empty-category 
+            a.basket-empty-category__link(href="#") 
+              .basket-empty-category__wrap
+                picture
+                  source(type="image/webp" srcset="images/category3.jpg")
+                  img.basket-empty-category__img(src="images/category3.jpg" alt="Столы")
+              h3.basket-empty-category__title Столы 
+
+

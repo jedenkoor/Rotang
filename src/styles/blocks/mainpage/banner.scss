@@ -1,0 +1,209 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 171px;
+  background: $neutral-color-9;
+  margin-top: -88px;
+  @include w1200 {
+    height: 850px;
+    margin-top: -64px;
+    padding-top: 140px;
+  }
+  @include w1023 {
+    height: auto;
+    padding-top: 118px;
+  }
+  @include w767 {
+    padding-top: 103px;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 68px;
+    font-weight: normal;
+    font-size: 81px;
+    line-height: 88px;
+    letter-spacing: -0.01em;
+    color: $primary-shade-color;
+    @include w1200 {
+      margin-bottom: 49px;
+      font-size: 70px;
+      line-height: 76px;
+    }
+    @include w1023 {
+      font-size: 52px;
+      line-height: 56px;
+      letter-spacing: 0.005em;
+    }
+    @include w767 {
+      margin-bottom: 33px;
+      font-size: 33px;
+      line-height: 40px;
+    }
+    @include w360 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+  &__content {
+    position: relative;
+    flex: 1;
+  }
+  &-content {
+    &__container {
+      display: grid;
+      grid-template-columns: 534px 1fr;
+      grid-gap: 28px;
+      flex: 1;
+      height: 100%;
+      padding-bottom: 40px;
+      @include w1023 {
+        grid-template-columns: 100%;
+        grid-gap: 32px;
+        padding-bottom: 24px;
+      }
+      @include w767 {
+        grid-gap: 23px;
+        padding-bottom: 16px;
+      }
+    }
+  }
+  &__text {
+    margin-top: 0;
+    margin-bottom: 48px;
+    font-size: 26px;
+    line-height: 32px;
+    @include w1023 {
+      margin-bottom: 24px;
+    }
+    @include w767 {
+      margin-bottom: 20px;
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+  &__row {
+    display: flex;
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    &:last-child {
+      @include w1023 {
+        order: -1;
+      }
+    }
+  }
+  &__item {
+    width: 197px;
+    margin: 0;
+    padding-top: 11px;
+    border-top: 1px solid $neutral-color-4;
+    font-size: 14px;
+    line-height: 16px;
+    &:not(:last-child) {
+      margin-right: 28px;
+      @include w1023 {
+        margin-right: 108px;
+      }
+      @include w767 {
+        margin-right: 16px;
+      }
+    }
+    @include w1023 {
+      width: 168px;
+    }
+    @include w767 {
+      flex: 1;
+      width: auto;
+      padding-top: 8px;
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+  &__btns {
+    display: flex;
+    margin-top: auto;
+    @include w1023 {
+      margin-top: 60px;
+    }
+    @include w767 {
+      display: block;
+      margin-top: 40px;
+    }
+  }
+  &__btn {
+    padding: 12px 29px;
+    @include w1023 {
+      flex: 1;
+      padding: 8px 0;
+    }
+    @include w767 {
+      display: block;
+      width: 100%;
+    }
+    &:not(:last-child) {
+      margin-right: 16px;
+      @include w767 {
+        margin-right: 0;
+        margin-bottom: 12px;
+      }
+    }
+    &.btn-secondary {
+      background: $neutral-color-10;
+    }
+  }
+  &__slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 500px;
+    @media screen and (min-width: 1368px) {
+      left: calc(((100vw - 1320px) / 2) + 562px);
+    }
+    @include w1023 {
+      position: relative;
+      left: 0;
+      transform: translateX(-24px);
+      width: 100vw;
+    }
+    @include w767 {
+      transform: translateX(-16px);
+    }
+  }
+  &-slider {
+    &__slide {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include w1023 {
+          height: 488px;
+        }
+        @include w767 {
+          height: 228px;
+        }
+      }
+    }
+    .swiper-pagination {
+      bottom: 18px;
+      @include w1023 {
+        bottom: 13px;
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      margin-top: 0;
+      top: auto;
+      bottom: 8px;
+    }
+    .swiper-button-prev {
+      left: 8px;
+    }
+    .swiper-button-next {
+      right: 8px;
+    }
+  }
+}

@@ -1,7 +1,60 @@
-extends ../main
+extends ../template
 
 block variables
-  - var title = 'Главная'
+  - var title = 'Карта сайта'
 
 block content
-  | КОНТЕНТ
+  style.
+    .map__container{
+      margin-top: 50px;
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td{
+      border: 1px solid black
+    }
+    td:hover{
+      background: #F7F7F7;
+    }
+    td a{
+      display: block;
+      padding: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      .map__container{
+        margin-top: 24px;
+      }
+      tr,
+      td {
+        display: block
+      }
+      tr:not(:last-child) td{
+        border-bottom: none
+      }
+      td a{
+        padding: 5px
+      }
+    }
+  .container.map__container.margin-section
+    h1.h1title Карта сайта
+    table
+      tbody
+        tr
+          td 
+            a(href="main.html" target="_blank") Главная
+        tr
+          td 
+            a(href="catalog.html" target="_blank") Каталог
+          td 
+            a(href="good.html" target="_blank") Страница товара
+        tr
+          td 
+            a(href="basket.html" target="_blank") Корзина
+        tr
+          td 
+            a(href="404.html" target="_blank") 404
+        tr
+          td 
+            a(href="text.html" target="_blank") Текстовая страница

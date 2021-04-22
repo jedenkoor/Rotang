@@ -1,0 +1,302 @@
+extends ../template
+
+block variables
+  - var title = 'Главная'
+
+block content
+  section.banner.margin-section
+    .container.banner__container
+      h1.banner__title Плетёная мебель из искусственного ротанга 
+    .banner__content.banner-content
+      .container.banner-content__container
+        .banner__col
+          p.banner__text Собственное производство в Санкт&#8209;Петербурге
+          .banner__row 
+            p.banner__item Мебель и аксессуары на&nbsp;заказ
+            p.banner__item Изделия для любого пространства
+          .banner__btns
+            a.banner__btn.btn-primary(href="#") Перейти в каталог
+            button.banner__btn.btn-secondary.popup-btn(data-popup="callback") Заказать звонок
+        .banner__col
+          .banner__slider.banner-slider.swiper-container
+            .banner-slider__wrapper.swiper-wrapper 
+              .banner-slider__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/banner.jpg")
+                  img(src="images/banner.jpg" alt="Баннер")
+              .banner-slider__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/banner2.jpg")
+                  img(src="images/banner2.jpg" alt="Баннер")
+              .banner-slider__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/banner3.jpg")
+                  img(src="images/banner3.jpg" alt="Баннер")
+              .banner-slider__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/banner.jpg")
+                  img(src="images/banner.jpg" alt="Баннер")
+              .banner-slider__slide.swiper-slide
+                picture
+                  source(type="image/webp" srcset="images/banner2.jpg")
+                  img(src="images/banner2.jpg" alt="Баннер")
+            .swiper-pagination
+            .swiper-button-prev
+              <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM22 4.5H1V3.5H22V4.5Z" fill="#ED6A4D"/>
+              </svg>
+            .swiper-button-next
+              <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.3536 4.35355C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464466C17.9763 0.269204 17.6597 0.269204 17.4645 0.464466C17.2692 0.659728 17.2692 0.976311 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53553C17.6597 7.7308 17.9763 7.7308 18.1716 7.53553L21.3536 4.35355ZM0 4.5H21V3.5H0V4.5Z" fill="#ED6A4D"/>
+              </svg>
+
+  section.about.margin-section
+    .container
+      h2.visually-hidden О нас
+      .about__top
+        picture
+          source(type="image/webp" srcset="images/banner2.jpg")
+          img.about__img(src="images/banner2.jpg" alt="О нас")
+        p.about__subtext Искусственный ротанг производится из качественного экологичного полимера, стойкого к любым атмосферным воздействиям (в частности к ультрафиолету — не выгорает и не разрушается), для изготовления плетёной мебели и малых архитектурных форм. Температурный диапазон эксплуатации изделий из искусственного ротанга — от -30 до +55 °С. Компания «Ковалёв Мебель» может подобрать и изготовить волокна любого цвета и формы.
+      .about__content
+        p.about__text Современные полимерные материалы служат исходным сырьём для искусственного ротанга. Внешний вид искусственного ротанга представляет собой пластиковую ленту, которая может быть различной ширины и иметь различную текстуру. Из искусственного ротанга делают мебель (патио-мебель) для кафе, ресторанов, улицы, бассейнов, яхт, катеров, саун, салонов красоты, веранд, дачи и тд.
+        p.about__text Изделия из искусственного ротанга не чувствительны к колебаниям температуры и прямому воздействию солнечного света, не пострадают из-за обильных осадков или уличной пыли, не притягивает бактерии и грибки, а уход за ними необременительный: все загрязнения&nbsp;можно легко удалить влажной губкой или просто полить из шланга водой.
+
+  section.why.margin-section
+    .container
+      h2.h2title Почему мы?
+      .why__content 
+        .why__col 
+          p.why__text Компания «Ковалёв Мебель» изготавливает всю мебель вручную с использованием премиум материалов. Так, мы внимательно контролируем весь процесс производства, чтобы не допустить брака, и если вы его обнаружите при использовании изделий, обратитесь к нам по гарантии, которая длится <span class="hint">2 года</span> на подвесные кресла и <span class="hint">3 года —</span> на всё остальное. Срок службы вещей — порядка 20 лет.
+          .why__row
+            .why__col
+              p.why__subtitle Используем искусственный ротанг при производстве
+              p.why__subtext Изделия из натурального ротанга сложны в уходе и не подходят для использования на улице, в то время как искусственный материал — антибактериальный и не трескается от высыхания
+            .why__col
+              p.why__subtitle Каркас мебели делаем из алюминия
+              p.why__subtext Прутья из алюминия от 2 мм в диаметре не ржавеют и выдерживают большие нагрузки, а сама мебель не прихотлива к погодным условиям и температуре от -30 до +55 °С
+        picture
+          source(type="image/webp" srcset="images/banner3.jpg")
+          img.why__img(src="images/banner3.jpg" alt="Почему мы?")
+
+  section.furniture
+    .container
+      h2.h2title Мебель на заказ
+      .furniture__content 
+        .furniture__col 
+          p.furniture__text Обращаем внимание, что мы готовы изготовить мебель по вашему эскизу. В форме обратной связи вы можете прикрепить свои эскизы в любом формате или описать нам свои пожелания
+          .furniture__btns
+            button.furniture__btn.btn-primary.popup-btn(data-popup="callback") Отправить эскиз
+            a.furniture__btn.btn-secondary(href="#") Перейти в каталог
+        .furniture__slider.furniture-slider.swiper-container
+          .furniture-slider__wrapper.swiper-wrapper
+            .furniture-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/furniture.jpg")
+                img.furniture-slider__img(src="images/furniture.jpg" alt="Мебель на заказ")
+            .furniture-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/furniture2.jpg")
+                img.furniture-slider__img(src="images/furniture2.jpg" alt="Мебель на заказ")
+            .furniture-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/furniture.jpg")
+                img.furniture-slider__img(src="images/furniture.jpg" alt="Мебель на заказ")
+            .furniture-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/furniture2.jpg")
+                img.furniture-slider__img(src="images/furniture2.jpg" alt="Мебель на заказ")
+            .furniture-slider__slide.swiper-slide
+              picture
+                source(type="image/webp" srcset="images/furniture.jpg")
+                img.furniture-slider__img(src="images/furniture.jpg" alt="Мебель на заказ")
+
+  section.categories
+    .container
+      h2.h2title.categories__title Каталог товаров
+      ul.categories__content 
+        li.categories__item 
+          a.categories__link.categories-link(href="#") 
+            .categories-link__wrap
+              picture
+                source(type="image/webp" srcset="images/category.jpg")
+                img.categories-link__img(src="images/category.jpg" alt="Подвесные кресла")
+            h3.categories-link__title Подвесные кресла
+        li.categories__item 
+          a.categories__link.categories-link(href="#") 
+            .categories-link__wrap
+              picture
+                source(type="image/webp" srcset="images/category2.jpg")
+                img.categories-link__img(src="images/category2.jpg" alt=" Диваны и комплекты")
+            h3.categories-link__title Диваны и комплекты
+        li.categories__item 
+          a.categories__link.categories-link(href="#") 
+            .categories-link__wrap
+              picture
+                source(type="image/webp" srcset="images/category3.jpg")
+                img.categories-link__img(src="images/category3.jpg" alt="Кресла")
+            h3.categories-link__title Кресла
+        li.categories__item 
+          a.categories__link.categories-link(href="#") 
+            .categories-link__wrap
+              picture
+                source(type="image/webp" srcset="images/category4.jpg")
+                img.categories-link__img(src="images/category4.jpg" alt="Столы")
+            h3.categories-link__title Столы
+        li.categories__item 
+          a.categories__link.categories-link(href="#") 
+            .categories-link__wrap
+              picture
+                source(type="image/webp" srcset="images/category5.jpg")
+                img.categories-link__img(src="images/category5.jpg" alt="Шезлонги")
+            h3.categories-link__title Шезлонги
+        li.categories__item 
+          a.categories__link.categories-link(href="#") 
+            .categories-link__wrap
+              picture
+                source(type="image/webp" srcset="images/category6.jpg")
+                img.categories-link__img(src="images/category6.jpg" alt="Ящики и комоды")
+            h3.categories-link__title Ящики и комоды
+        li.categories__item 
+          a.categories__link.categories-link(href="#") 
+            .categories-link__wrap
+              picture
+                source(type="image/webp" srcset="images/category7.jpg")
+                img.categories-link__img(src="images/category7.jpg" alt="Аксессуары")
+            h3.categories-link__title Аксессуары
+        li.categories__item 
+          p.categories__text Обращаем внимание, что мы готовы изготовить мебель по вашему эскизу
+          button.categories__btn.popup-btn(data-popup="callback") Отправить эскиз
+
+  section.process.margin-section
+    .container
+      h2.h2title.process__title Процесс производства
+      ul.process__content 
+        li.process__item.process-item 
+          picture
+            source(type="image/webp" srcset="images/process.jpg")
+            img.process-item__img(src="images/process.jpg" alt="Составление договора")
+          h3.process-item__title Составление договора
+          p.process-item__text Перед началом работы зафиксируем её этапы на бумаге
+        li.process__item.process-item 
+          picture
+            source(type="image/webp" srcset="images/process2.jpg")
+            img.process-item__img(src="images/process2.jpg" alt="Закупка материалов")
+          h3.process-item__title Закупка материалов
+          p.process-item__text Для твёрдых поверхностей используем калёное стекло компании <span class="hint">Акма</span>
+        li.process__item.process-item 
+          picture
+            source(type="image/webp" srcset="images/process3.jpg")
+            img.process-item__img(src="images/process3.jpg" alt="Производство")
+          h3.process-item__title Производство
+          p.process-item__text Металлоконструкции делаем из алюминия 2 мм из-за его толщины и долговечности
+        li.process__item.process-item 
+          picture
+            source(type="image/webp" srcset="images/process4.jpg")
+            img.process-item__img(src="images/process4.jpg" alt="Сварка аргоном")
+          h3.process-item__title Сварка аргоном 
+          p.process-item__text Соединияем все части алюминиевой конструкции
+        li.process__item.process-item 
+          picture
+            source(type="image/webp" srcset="images/process5.jpg")
+            img.process-item__img(src="images/process5.jpg" alt="Порошковая покраска")
+          h3.process-item__title Порошковая покраска
+          p.process-item__text Распыляем краску на все части изделия, чтобы она легла равномерно и не создала рельеф
+        li.process__item.process-item 
+          picture
+            source(type="image/webp" srcset="images/process6.jpg")
+            img.process-item__img(src="images/process6.jpg" alt="Плетение вручную")
+          h3.process-item__title Плетение вручную
+          p.process-item__text Наши мастеры обучены ручному плетению, чтобы контролировать процесс
+
+  section.reviews
+    .container
+      .reviews__top
+        h2.h2title.reviews__title Отзывы наших покупателей
+        button.reviews__btn.btn-secondary.popup-btn(data-popup="review") Оставить отзыв
+      .reviews-slider__wrap
+        .reviews__slider.reviews-slider.swiper-container
+          .reviews-slider__wrapper.swiper-wrapper 
+            .reviews-slider__slide.reviews-slider-slide.swiper-slide
+              h4.reviews-slider-slide__title Иванова Ирина
+              span.reviews-slider-slide__date 12.01.2020
+              p.reviews-slider-slide__text Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло. 
+            .reviews-slider__slide.reviews-slider-slide.swiper-slide
+              h4.reviews-slider-slide__title Иванова Ирина
+              span.reviews-slider-slide__date 12.01.2020
+              p.reviews-slider-slide__text Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло. Его многочисленные, убого тонкие по сравнению с
+            .reviews-slider__slide.reviews-slider-slide.swiper-slide
+              h4.reviews-slider-slide__title Иванова Ирина
+              span.reviews-slider-slide__date 12.01.2020
+              p.reviews-slider-slide__text Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный 
+            .reviews-slider__slide.reviews-slider-slide.swiper-slide
+              h4.reviews-slider-slide__title Иванова Ирина
+              span.reviews-slider-slide__date 12.01.2020
+              p.reviews-slider-slide__text Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло. 
+            .reviews-slider__slide.reviews-slider-slide.swiper-slide
+              h4.reviews-slider-slide__title Иванова Ирина
+              span.reviews-slider-slide__date 12.01.2020
+              p.reviews-slider-slide__text Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло. Его многочисленные, убого тонкие по сравнению с
+            .reviews-slider__slide.reviews-slider-slide.swiper-slide
+              h4.reviews-slider-slide__title Иванова Ирина
+              span.reviews-slider-slide__date 12.01.2020
+              p.reviews-slider-slide__text Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный 
+            .reviews-slider__slide.reviews-slider-slide.swiper-slide
+              h4.reviews-slider-slide__title Иванова Ирина
+              span.reviews-slider-slide__date 12.01.2020
+              p.reviews-slider-slide__text Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный 
+        .swiper-pagination
+        .swiper-button-prev
+          <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM22 4.5H1V3.5H22V4.5Z" fill="#ED6A4D"/>
+          </svg>
+        .swiper-button-next
+          <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.3536 4.35355C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464466C17.9763 0.269204 17.6597 0.269204 17.4645 0.464466C17.2692 0.659728 17.2692 0.976311 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53553C17.6597 7.7308 17.9763 7.7308 18.1716 7.53553L21.3536 4.35355ZM0 4.5H21V3.5H0V4.5Z" fill="#ED6A4D"/>
+          </svg>
+
+  section.contacts.margin-section
+    .container
+      h2.h2title Контакты
+      .contacts__content 
+        .contacts__info.contacts-info
+          p.contacts-info__text Мебель из искусственного ротанга «Ковалёв Мебель»
+          .contacts-info__row 
+            .contacts-info__col
+              p.contacts-info__title Мы на связи и онлайн
+              a.contacts-info__item(href="tel:89500051066") 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.56288 9.58821C2.48053 7.89453 3.05132 5.94868 4.30586 4.69414L5.6435 3.3565C6.68119 2.31881 8.36361 2.31881 9.40129 3.35649L11.1557 5.11089C11.9367 5.89195 12.097 7.09975 11.5466 8.05743C11.2196 8.62644 10.429 10.2298 10.8931 10.6939L13.8625 13.6632C14.3266 14.1273 15.9299 13.3368 16.4989 13.0098C17.4566 12.4594 18.6644 12.6196 19.4455 13.4007L21.1999 15.1551C22.2375 16.1927 22.2375 17.8752 21.1999 18.9128L19.8622 20.2505C18.6077 21.505 16.6618 22.0758 14.9681 20.9935C13.5686 20.0991 11.5291 18.5291 8.77817 15.7782C6.02722 13.0272 4.45724 10.9877 3.56288 9.58821ZM5.55845 5.94674C4.71709 6.78811 4.5418 7.83038 5.05555 8.63432C5.86587 9.90231 7.34822 11.843 10.0308 14.5256C12.7133 17.2081 14.654 18.6905 15.922 19.5008C16.726 20.0146 17.7682 19.8393 18.6096 18.9979L19.9473 17.6602C20.2932 17.3144 20.2932 16.7535 19.9473 16.4077L18.1929 14.6533C17.9778 14.4382 17.6453 14.3941 17.3816 14.5456C16.1186 15.2715 13.64 15.9459 12.6099 14.9158L9.6405 11.9464C8.61042 10.9164 9.28483 8.43777 10.0107 7.17474C10.1623 6.91107 10.1181 6.57853 9.9031 6.36349L8.1487 4.60909C7.8028 4.2632 7.242 4.2632 6.8961 4.60909L5.55845 5.94674Z" fill="#67534E"/>
+                </svg>
+                | +7 950 005 10 66
+              a.contacts-info__item(href="#") 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0007 3C9.5565 3 9.24975 3.01069 8.28975 3.05438C7.33162 3.09825 6.67762 3.24994 6.10537 3.4725C5.51344 3.70237 5.01131 4.00987 4.51106 4.51031C4.01044 5.01056 3.70294 5.51269 3.47231 6.10444C3.24919 6.67688 3.09731 7.33106 3.05419 8.28881C3.01125 9.24881 3 9.55575 3 12C3 14.4443 3.01087 14.7501 3.05438 15.7101C3.09844 16.6682 3.25012 17.3222 3.4725 17.8944C3.70256 18.4864 4.01006 18.9885 4.5105 19.4888C5.01056 19.9894 5.51269 20.2976 6.10425 20.5275C6.67687 20.7501 7.33106 20.9017 8.289 20.9456C9.249 20.9893 9.55556 21 11.9996 21C14.4441 21 14.7499 20.9893 15.7099 20.9456C16.668 20.9017 17.3227 20.7501 17.8954 20.5275C18.4871 20.2976 18.9885 19.9894 19.4886 19.4888C19.9892 18.9885 20.2967 18.4864 20.5273 17.8946C20.7486 17.3222 20.9004 16.668 20.9454 15.7102C20.9886 14.7502 20.9998 14.4443 20.9998 12C20.9998 9.55575 20.9886 9.249 20.9454 8.289C20.9004 7.33087 20.7486 6.67687 20.5273 6.10462C20.2967 5.51269 19.9892 5.01056 19.4886 4.51031C18.9879 4.00969 18.4873 3.70219 17.8948 3.4725C17.3211 3.24994 16.6667 3.09825 15.7086 3.05438C14.7486 3.01069 14.4429 3 11.9979 3H12.0007ZM11.7009 4.62179H11.7009L12.0009 4.62187C14.4039 4.62187 14.6887 4.6305 15.6376 4.67362C16.5151 4.71375 16.9914 4.86037 17.3086 4.98356C17.7286 5.14669 18.0281 5.34169 18.3429 5.65669C18.6579 5.97169 18.8529 6.27169 19.0164 6.69169C19.1395 7.00856 19.2864 7.48481 19.3263 8.36231C19.3694 9.31106 19.3788 9.59606 19.3788 11.9979C19.3788 14.3998 19.3694 14.6848 19.3263 15.6336C19.2862 16.5111 19.1395 16.9873 19.0164 17.3042C18.8532 17.7242 18.6579 18.0232 18.3429 18.3381C18.0279 18.6531 17.7288 18.8481 17.3086 19.0112C16.9917 19.1349 16.5151 19.2812 15.6376 19.3213C14.6889 19.3644 14.4039 19.3738 12.0009 19.3738C9.59768 19.3738 9.31286 19.3644 8.36411 19.3213C7.48661 19.2808 7.01036 19.1342 6.69293 19.011C6.27293 18.8479 5.97293 18.6529 5.65793 18.3379C5.34293 18.0229 5.14793 17.7236 4.98443 17.3034C4.86124 16.9866 4.71443 16.5103 4.67449 15.6328C4.63136 14.6841 4.62274 14.3991 4.62274 11.9957C4.62274 9.59231 4.63136 9.30881 4.67449 8.36006C4.71461 7.48256 4.86124 7.00631 4.98443 6.68906C5.14755 6.26906 5.34293 5.96906 5.65793 5.65406C5.97293 5.33906 6.27293 5.14406 6.69293 4.98056C7.01018 4.85681 7.48661 4.71056 8.36411 4.67025C9.19436 4.63275 9.51611 4.6215 11.1935 4.61962V4.62187C11.3502 4.62163 11.5188 4.6217 11.7008 4.62179H11.7008H11.7009ZM15.7247 7.19587C15.7247 6.59944 16.2085 6.11625 16.8047 6.11625V6.11587C17.401 6.11587 17.8847 6.59962 17.8847 7.19587C17.8847 7.79212 17.401 8.27587 16.8047 8.27587C16.2085 8.27587 15.7247 7.79212 15.7247 7.19587ZM12.001 7.37812C9.4486 7.37822 7.37927 9.44762 7.37927 12C7.37927 14.5524 9.4487 16.6209 12.0011 16.6209C14.5536 16.6209 16.6223 14.5524 16.6223 12C16.6223 9.44756 14.5534 7.37812 12.001 7.37812ZM15.0011 12C15.0011 10.3431 13.6578 9 12.0011 9C10.3441 9 9.00108 10.3431 9.00108 12C9.00108 13.6568 10.3441 15 12.0011 15C13.6578 15 15.0011 13.6568 15.0011 12Z" fill="#67534E"/>
+                </svg>
+                | mebel_rotang_spb
+              a.contacts-info__item(href="mailto:mrattan198@gmail.com") 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4.63636C7.93318 4.63636 4.63636 7.93318 4.63636 12C4.63636 16.0668 7.93318 19.3636 12 19.3636C12.4519 19.3636 12.8182 19.7299 12.8182 20.1818C12.8182 20.6337 12.4519 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 12.9559 20.8979 14.1197 20.4672 15.0731C20.2473 15.56 19.9266 16.0258 19.4583 16.37C18.9807 16.721 18.3987 16.9091 17.7273 16.9091C17.0387 16.9091 16.4505 16.6978 15.9759 16.3256C15.5135 15.9629 15.1988 15.4795 14.9834 14.987C14.9645 14.9438 14.9462 14.9003 14.9286 14.8564C14.1856 15.618 13.148 16.0909 12 16.0909C9.74065 16.0909 7.90909 14.2593 7.90909 12C7.90909 9.74065 9.74065 7.90909 12 7.90909C12.9563 7.90909 13.836 8.23725 14.5326 8.7871C14.6637 8.50993 14.9458 8.31818 15.2727 8.31818C15.7246 8.31818 16.0909 8.68449 16.0909 9.13636V12C16.0909 12.7741 16.191 13.6648 16.4825 14.3311C16.625 14.6568 16.7962 14.8894 16.9858 15.038C17.1632 15.1772 17.3932 15.2727 17.7273 15.2727C18.0786 15.2727 18.3147 15.1797 18.4892 15.0515C18.6728 14.9165 18.8379 14.7051 18.976 14.3995C19.2612 13.768 19.3636 12.8864 19.3636 12C19.3636 7.93318 16.0668 4.63636 12 4.63636ZM14.4545 12C14.4545 10.6444 13.3556 9.54545 12 9.54545C10.6444 9.54545 9.54545 10.6444 9.54545 12C9.54545 13.3556 10.6444 14.4545 12 14.4545C13.3556 14.4545 14.4545 13.3556 14.4545 12Z" fill="#67534E"/>
+                </svg>
+                | mrattan198@gmail.com
+            .contacts-info__col
+              p.contacts-info__title Офис в Санкт-Петербурге
+              .contacts-info__item 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.61929 5.61929C8.86953 4.36905 10.5652 3.66667 12.3333 3.66667C14.1014 3.66667 15.7971 4.36905 17.0474 5.61929C18.2976 6.86953 19 8.56522 19 10.3333C19 12.915 17.3202 15.4202 15.4784 17.3644C14.5745 18.3185 13.6678 19.0996 12.9861 19.6424C12.7324 19.8444 12.5108 20.0127 12.3333 20.1438C12.1559 20.0127 11.9343 19.8444 11.6806 19.6424C10.9989 19.0996 10.0922 18.3185 9.18829 17.3644C7.34645 15.4202 5.66667 12.915 5.66667 10.3333C5.66667 8.56522 6.36905 6.86953 7.61929 5.61929ZM11.8706 21.8597C11.8709 21.8599 11.8711 21.86 12.3333 21.1667L11.8711 21.86C12.151 22.0467 12.5157 22.0467 12.7956 21.86L12.3333 21.1667C12.7956 21.86 12.7958 21.8599 12.796 21.8597L12.7967 21.8593L12.7984 21.8581L12.804 21.8544L12.8231 21.8415C12.8393 21.8305 12.8624 21.8147 12.892 21.7942C12.9512 21.7532 13.0363 21.6934 13.1435 21.616C13.3579 21.4612 13.6614 21.2352 14.0243 20.9462C14.7489 20.3692 15.7172 19.5357 16.6883 18.5106C18.5964 16.4965 20.6667 13.585 20.6667 10.3333C20.6667 8.1232 19.7887 6.00358 18.2259 4.44078C16.6631 2.87797 14.5435 2 12.3333 2C10.1232 2 8.00358 2.87797 6.44078 4.44078C4.87797 6.00358 4 8.1232 4 10.3333C4 13.585 6.07022 16.4965 7.97837 18.5106C8.94949 19.5357 9.91778 20.3692 10.6424 20.9462C11.0053 21.2352 11.3088 21.4612 11.5232 21.616C11.6304 21.6934 11.7154 21.7532 11.7746 21.7942C11.8042 21.8147 11.8274 21.8305 11.8436 21.8415L11.8627 21.8544L11.8682 21.8581L11.87 21.8593L11.8706 21.8597ZM10.6667 10.3333C10.6667 9.41286 11.4129 8.66667 12.3333 8.66667C13.2538 8.66667 14 9.41286 14 10.3333C14 11.2538 13.2538 12 12.3333 12C11.4129 12 10.6667 11.2538 10.6667 10.3333ZM12.3333 7C10.4924 7 9 8.49238 9 10.3333C9 12.1743 10.4924 13.6667 12.3333 13.6667C14.1743 13.6667 15.6667 12.1743 15.6667 10.3333C15.6667 8.49238 14.1743 7 12.3333 7Z" fill="#67534E"/>
+                </svg>
+                | ТЦ «Villa», ул. Савушкина, д. 119, 2-ой этаж
+          form.contacts__form.contacts-form(action="#")
+            .contacts-form__row 
+              label.contacts-form__input.input-block 
+                input(placeholder=" " data-required="")
+                span Ваше имя
+              label.contacts-form__input.input-block 
+                input(placeholder=" " data-type="tel" data-required="")
+                span Телефон
+            button.contacts-form__btn.btn-primary(type="submit") Заказать звонок
+            p.contacts-form__text Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+        .contacts__map 
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3039f168efc2296e38158893cd3bf27f7610e4fc6a81f35aec6093671c555dcf&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+
+

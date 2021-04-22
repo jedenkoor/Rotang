@@ -1,0 +1,84 @@
+extends ../template
+
+block variables
+  - var title = 'Каталог'
+  - var breadrumbs = 1
+
+block content
+  section.catalog.margin-section
+    .container 
+      h1.h1title Каталог
+      .catalog__content 
+        aside.catalog__filter.catalog-filter.select
+          button.catalog-filter__show.select-open
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 10C18 11.1046 17.1046 12 16 12C14.8954 12 14 11.1046 14 10C14 8.89543 14.8954 8 16 8C17.1046 8 18 8.89543 18 10ZM18 16C18 17.1046 17.1046 18 16 18C14.8954 18 14 17.1046 14 16C14 14.8954 14.8954 14 16 14C17.1046 14 18 14.8954 18 16ZM16 24C17.1046 24 18 23.1046 18 22C18 20.8954 17.1046 20 16 20C14.8954 20 14 20.8954 14 22C14 23.1046 14.8954 24 16 24Z" fill="black"/>
+            </svg>
+          .catalog-filter__wrap.select-block
+            ul.catalog-filter__list
+              li.catalog-filter__item
+                a.catalog-filter__link(href="#")  Все товары
+              li.catalog-filter__item
+                a.catalog-filter__link.catalog-filter__link--active(href="#") Подвесные кресла
+              li.catalog-filter__item
+                a.catalog-filter__link(href="#") Диваны и комплекты
+              li.catalog-filter__item
+                a.catalog-filter__link(href="#") Кресла
+              li.catalog-filter__item
+                a.catalog-filter__link(href="#") Столы
+              li.catalog-filter__item
+                a.catalog-filter__link(href="#") Шезлонги
+              li.catalog-filter__item
+                a.catalog-filter__link(href="#") Ящики и комоды
+              li.catalog-filter__item
+                a.catalog-filter__link(href="#") Аксессуары
+            button.catalog-filter__btn.btn-secondary.popup-btn(data-popup="callback") Заказать изделие
+        .catalog__wrap
+          ul.catalog__list
+            -for(i = 0; i < 3; i++)
+              li.catalog__item.catalog-item
+                a.catalog-item__link(href="#")
+                  .catalog-item-slider__wrap
+                    .catalog-item__slider.catalog-item-slider.swiper-container
+                      .catalog-item-slider__wrapper.swiper-wrapper
+                        .catalog-item-slider__slide.swiper-slide
+                          picture
+                            source(type="image/webp" srcset="images/good.jpg")
+                            img.catalog-item-slider__img(src="images/good.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+                        .catalog-item-slider__slide.swiper-slide
+                          picture
+                            source(type="image/webp" srcset="images/good2.jpg")
+                            img.catalog-item-slider__img(src="images/good2.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+                        .catalog-item-slider__slide.swiper-slide
+                          picture
+                            source(type="image/webp" srcset="images/good3.jpg")
+                            img.catalog-item-slider__img(src="images/good3.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+                    .swiper-pagination
+                  p.catalog-item__title Кресло подвесное «Хаос» с подушкой Кресло подвесное «Хаос» с подушкой
+                  .catalog-item__row
+                    span.catalog-item__price 20 000 руб.
+                button.catalog-item__btn.btn-primary.popup-btn(data-popup="addToBasket") В корзину
+              li.catalog__item.catalog-item
+                a.catalog-item__link(href="#")
+                  .catalog-item-slider__wrap
+                    .catalog-item__slider.catalog-item-slider.swiper-container
+                      .catalog-item-slider__wrapper.swiper-wrapper
+                        .catalog-item-slider__slide.swiper-slide
+                          picture
+                            source(type="image/webp" srcset="images/good.jpg")
+                            img.catalog-item-slider__img(src="images/good.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+                        .catalog-item-slider__slide.swiper-slide
+                          picture
+                            source(type="image/webp" srcset="images/good2.jpg")
+                            img.catalog-item-slider__img(src="images/good2.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+                        .catalog-item-slider__slide.swiper-slide
+                          picture
+                            source(type="image/webp" srcset="images/good3.jpg")
+                            img.catalog-item-slider__img(src="images/good3.jpg" alt="Кресло подвесное «Хаос» с подушкой")
+                    .swiper-pagination
+                  p.catalog-item__title Кресло подвесное «Хаос» с подушкой
+                  .catalog-item__row
+                    span.catalog-item__price.catalog-item__price--new 1 320 000 руб.
+                    span.catalog-item__price.catalog-item__price--old 1 520 000 руб.
+                button.catalog-item__btn.btn-primary.popup-btn(data-popup="addToBasket") В корзину
+          button.catalog__more.btn-secondary Показать ещё

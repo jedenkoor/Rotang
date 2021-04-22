@@ -9,6 +9,7 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    'space-before-function-paren': 0
+    'space-before-function-paren': 0,
+    indent: 0
   }
 }

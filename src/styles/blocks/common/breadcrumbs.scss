@@ -1,0 +1,35 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 23px;
+  margin-bottom: 45px;
+  padding: 0;
+  list-style: none;
+  @include w1023 {
+    display: none;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 16px;
+    color: $primary-shade-color;
+    &:not(:last-child) {
+      color: $neutral-color-6;
+      &:after {
+        content: '/';
+        display: inline-block;
+        margin: 0 13px;
+      }
+    }
+  }
+  &__link {
+    &:not(:not(a)) {
+      &:hover,
+      &:focus {
+        color: $tertiary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.text {
+  padding-top: 86px;
+  @include w1200 {
+    padding-top: 56px;
+  }
+  @include w767 {
+    padding-top: 40px;
+  }
+  &__title {
+    @include w1023 {
+      font-size: 33px;
+      line-height: 40px;
+    }
+    @include w767 {
+      margin-bottom: 24px;
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: $primary-color;
+  }
+  p {
+    max-width: 758px;
+    margin-top: 0;
+    color: $primary-shade-color;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
