@@ -1,10 +1,19 @@
 import Swiper from 'swiper/swiper-bundle.js'
 import 'swiper/swiper-bundle.css'
 import IMask from 'imask'
-
+import ScrollMagic from 'scrollmagic'
+import { gsap, TweenMax } from 'gsap'
+import { ScrollToPlugin } from 'gsap/all'
+gsap.registerPlugin(ScrollToPlugin)
 class Init {
   constructor() {
     this.init()
+
+    // Init smothscroll
+    this.controller = new ScrollMagic.Controller()
+    this.controller.scrollTo(function (newpos) {
+      TweenMax.to(window, 0.6, { scrollTo: { y: newpos } })
+    })
   }
 
   init() {
@@ -14,6 +23,7 @@ class Init {
 
     setTimeout(() => {
       this.actions().showBody()
+      this.actions().scrollToBlockOnLoading()
     }, 300)
 
     if (document.querySelectorAll('.banner__slider').length) {
@@ -54,6 +64,11 @@ class Init {
 
   events() {
     const _this = this
+
+    window.ap(document).on('click', '.header-list__link, .footer-list__link', function (e) {
+      e.preventDefault()
+      _this.actions().scrollToBlock(this)
+    })
 
     window.ap(document).on('input', '[data-type="textarea"]', function (e) {
       _this.actions().autoGrowTextarea(this)
@@ -99,7 +114,30 @@ class Init {
   }
 
   actions() {
+    const _this = this
     return {
+      scrollToBlockOnLoading() {
+        if (localStorage.getItem('idBLock')) {
+          const element = document.querySelector(`#${localStorage.getItem('idBLock')}`)
+          const topPos = element.getBoundingClientRect().top + window.pageYOffset
+          window.scrollTo({
+            top: topPos
+          })
+          localStorage.removeItem('idBLock')
+        }
+      },
+      scrollToBlock(el) {
+        const id = el.getAttribute('href').split('#')[1] || ''
+        const linkPathname = el.getAttribute('href').split('#')[0]
+        const currentPathname = location.pathname
+        if (id.length > 0 && currentPathname === linkPathname) {
+          _this.controller.scrollTo(`#${id}`)
+        }
+        if (currentPathname !== linkPathname) {
+          localStorage.setItem('idBLock', id)
+          location.href = linkPathname
+        }
+      },
       getScrollbarWidth() {
         return window.innerWidth - document.documentElement.clientWidth
       },
