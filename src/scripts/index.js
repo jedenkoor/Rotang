@@ -65,7 +65,15 @@ class Init {
   events() {
     const _this = this
 
-    window.ap(document).on('click', '.header-list__link, .footer-list__link', function (e) {
+    window.ap(document).on('click', '.header-list__link', function (e) {
+      e.preventDefault()
+      _this.actions().scrollToBlock(this)
+      if (document.documentElement.clientWidth < 1200) {
+        _this.actions().toggleMenu()
+      }
+    })
+
+    window.ap(document).on('click', '.footer-list__link', function (e) {
       e.preventDefault()
       _this.actions().scrollToBlock(this)
     })
@@ -84,9 +92,9 @@ class Init {
       _this.actions().hidePopup(this)
     })
 
-    window.ap(document).on('click', '.header__burger', function (e) {
+    window.ap(document).on('click', '.header__burger', (e) => {
       e.preventDefault()
-      _this.actions().toggleMenu(this)
+      _this.actions().toggleMenu()
     })
 
     window.ap(document).on('click', '.select-open', function (e) {
@@ -255,8 +263,6 @@ class Init {
           document.querySelector('.header__nav').classList.remove('header__nav--active')
           document.querySelector('.header__burger').classList.remove('header__burger--active')
         } else {
-          document.querySelector('html').classList.remove('compensate-for-scrollbar')
-          document.querySelector('html').classList.remove('fixed')
           const overlay = document.querySelector('.overlay')
           const popup = document.querySelector('.popup--active')
           const popupTrigger = document.querySelector('.popup-trigger')
@@ -265,6 +271,8 @@ class Init {
           popupTrigger.focus()
           popupTrigger.classList.remove('popup-trigger')
         }
+        document.querySelector('html').classList.remove('compensate-for-scrollbar')
+        document.querySelector('html').classList.remove('fixed')
       },
       initCatalogSlider(el) {
         const slider = el.querySelector('.swiper-container')
@@ -282,9 +290,9 @@ class Init {
         const pagination = el.querySelector('.swiper-pagination')
         const prevArr = el.querySelector('.swiper-button-prev')
         const nextArr = el.querySelector('.swiper-button-next')
-        const thumbsSlider = el.nextSibling.querySelector('.swiper-container')
-        const thumbsPrevArr = el.nextSibling.querySelector('.swiper-button-prev')
-        const thumbsNextArr = el.nextSibling.querySelector('.swiper-button-next')
+        const thumbsSlider = el.nextElementSibling.querySelector('.swiper-container')
+        const thumbsPrevArr = el.nextElementSibling.querySelector('.swiper-button-prev')
+        const thumbsNextArr = el.nextElementSibling.querySelector('.swiper-button-next')
 
         const thumbs = new Swiper(thumbsSlider, {
           spaceBetween: 16,
@@ -316,11 +324,12 @@ class Init {
             }
           }))()
       },
-      toggleMenu(el) {
+      toggleMenu() {
+        const burger = document.querySelector('.header__burger')
         const menu = document.querySelector('.header__nav')
         const overlay = document.querySelector('.overlay')
 
-        el.classList.toggle('header__burger--active')
+        burger.classList.toggle('header__burger--active')
         overlay.classList.toggle('overlay--menu')
         menu.classList.toggle('header__nav--active')
         document.querySelector('html').classList.toggle('fixed')
