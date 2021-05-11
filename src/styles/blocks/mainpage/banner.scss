@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  min-height: 800px;
   padding-top: 171px;
   background: $neutral-color-9;
   margin-top: -88px;
@@ -13,6 +14,7 @@
   }
   @include w1023 {
     height: auto;
+    min-height: auto;
     padding-top: 118px;
   }
   @include w767 {

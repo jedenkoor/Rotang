@@ -68,8 +68,11 @@
       line-height: 32px;
       @include w767 {
         margin-top: 8px;
-        font-size: 17px;
+        font-size: 14px;
         line-height: 24px;
+      }
+      @include w360 {
+        font-size: 12px;
       }
     }
   }

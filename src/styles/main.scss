@@ -297,6 +297,21 @@ input[type='number'] {
   }
 }
 
+textarea {
+  &.input-err {
+    border-color: $system-error-color !important;
+    &::placeholder {
+      color: $system-error-color !important;
+    }
+  }
+  &.input-border {
+    border-color: $system-success-color !important;
+    &::placeholder {
+      color: $system-success-color !important;
+    }
+  }
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   z-index: 2;
